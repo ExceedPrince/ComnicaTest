@@ -1,0 +1,39 @@
+@import "./variables";
+@import "./animations";
+
+@mixin roundedBtn {
+    border: none;
+    padding: 10px;
+    background-color: $buttonGreen;
+    font-size: 16px;
+    color: white;
+    border-radius: 50px;
+    transition: background-color 200ms ease-in-out;
+
+    &:hover {
+        background-color: $buttonGreenHover;
+        cursor: pointer;
+    }
+
+    &:active {
+        background-color: $buttonGreenActive;
+        cursor: pointer;
+    }
+}
+
+@mixin flexRow {
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin gap-10 {
+    gap: 10px;
+}
+
+@mixin fadeUp {
+    animation: fadeUp 700ms 300ms forwards;
+}
+
+@mixin fadeLeft {
+    animation: fadeLeft 700ms 300ms forwards;
+}

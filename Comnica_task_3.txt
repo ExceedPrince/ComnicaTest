@@ -1,0 +1,56 @@
+3. Feladat:
+
+Írj egy tetszőleges JS funkciót, ami lekér egy felhasználó listát egy képzeletbeli API-ról, majd miután ezt sikerrel megtette, lekér egy szín listát, majd miután ez is sikerült, egy tetszőleges színt rendel a 1-1 felhasználóhoz és így adja vissza a felhasználók listáját. Hiba esetén a console-ra ír illetve eredménytől függetlenül a console-ra írja, ha végzett.
+_________________________________
+
+const USERS_API_URL = 'https://dummy-api.com/users';
+const COLORS_API_URL = 'https://dummy-api.com/colors';
+const USERS_FETCHING_ERROR = 'Error during fecthing the Users API data';
+const COLORS_FETCHING_ERROR = 'Error during fecthing the Colors API data';
+const EMPTY_USERS_LIST = 'There aren\'t any user that can be assigned with colors';
+const NO_COLOR = 'No color';
+const SUCCESS_MESSAGE = 'Users with colors:';
+const CATCH_MESSAGE = 'Error occured:';
+const FINALLY_MESSAGE = 'End of fetching data.';
+
+async function getUsersAndAssignColors() {
+  try {
+    const userList = await fetch(USERS_API_UR);
+
+    if (!userList) {
+      throw new Error(USERS_FETCHING_ERROR);
+    }
+    const users = await userList.json();
+
+    if (users.length === 0) {
+      console.log(EMPTY_USERS_LIST);
+
+      return users;
+    }	
+
+    const colorList = await fetch(COLORS_API_URL);
+
+    if (!colorList) {
+      throw new Error(COLORS_FETCHING_ERROR);
+    }
+    const colors = await colorList.json();
+
+    const usersWithColors = users.map((user, index) => {
+      let color = NO_COLOR;
+
+      if (colors.length > 0) {
+        color = colors[index % colors.length];
+      }
+
+      return {...user, color};
+    });
+
+    console.log(SUCCESS_MESSAGE, assignedUsers);
+
+    return usersWithColors;
+  } catch (err) {
+    console.error(CATCH_MESSAGE, err);
+  } finally {
+    console.log(FINALLY_MESSAGE);
+  }
+}

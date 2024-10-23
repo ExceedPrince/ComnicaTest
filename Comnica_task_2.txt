@@ -1,0 +1,18 @@
+2. Feladat:
+
+Adott egy gomb. Elvileg minden rendben kód szinten, mégsem csinál semmit se hover, se egyéb eseményre (nem disabled). Mi lehet a probléma, mi okozhat ilyen jelenséget?
+_________________________________
+
+Abban az esetben, ha kód szinten rendben van, tehát kizárható:
+	- a Javascript hiba; vagyis a kód valahol korábban hibára futott és ez megakasztotta a további működést,
+	- a HTML szintaktikai/szerkezeti hiba; vagyis minden attribútum és nyitó- záró tag megfelelően van használva,
+	- a hibásan használt eseménykezelők; ami lehet nem megfelelő JS esemény használata, vagy elütési hiba (pl. "onclick"-"onClick"),
+
+Akkor az alábbi okok szolgálhatnak még lehetséges magyarázattal a gomb viselkedési problémájára:
+
+	1. pointer-events:none - Ha ez a CSS tulajdonság (property) rajta van a gombon, vagy annak valamelyik szülőelemén, akkor ez letilt mindenféle interakciót, amit a kurzorral lehet végrehajtani a gombon.
+
+	2. z-index probléma: A z-index CSS property-vel a gombot is túlságosan háttérbe lehet szorítani, vagy másik elemet értékében "fölé" helyezni, ezáltal a gomb takarásba kerül és a kurzor nem tud interakcióba lépni vele.
+
+	3. Átfedés az elemek között: Előfordulhat, hogy egy másik elem (ami lehet akár láthatatlan elem is) rálóg vagy letakarja a gombot (pl. rosszul kezelt responsive design miatt), és amiatt a gomb egérrel használhatatlan lesz.
+

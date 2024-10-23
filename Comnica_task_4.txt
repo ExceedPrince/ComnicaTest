@@ -1,0 +1,12 @@
+4. Feladat:
+
+A designer a következőképpen álmodja meg a beviteli mező működését: (kép). Mi lehet ezzel a működéssel az általános probléma?
+________________________________
+
+	- Ha a 'label' szöveg funkcióját tekintve is egy label HTML tag, azzal, hogy kezdetben az inputmezőben van, mint placeholder, majd kitöltött állapotban, vagy 'focusin' eseményre felcsúszik a bal felső sarokba, zavaró lehet a felhasználók számára. A placeholder szövegek alapvetően ideiglenes útmutatásra szolgálnak, de begépelés, vagy fókusz hatására eltűnnek. Ezzel szemben a label, azaz címke általában mindig látható, így a felhasználó folyamatosan informálva van, hogy milyen adatot várnak tőle. Itt a két funkció összemosása következetlenséget okozhat.
+
+	- A label mozgása látványos lehet, de az ilyen animációk néha megzavarhatják a felhasználókat. Elsőre furcsa lehet, hogy a szöveg mozog, és nem feltétlenül egyértelmű, hogy a lebegő címke valójában a mező címkéje, és nem csak egy eltűnő helykitöltő szöveg. Opcionálisan még azt is feltételezhetik, hogy részét fogja képezni a bevitt adatnak.
+
+	- Ha nem megfelelően van kezelve a label viselkedése, akkor előfordulhat, hogy túl lassan fog mozogni, vagy összekeverhet, hogy mikor milyen státuszban kellene lennie, és ez tévesen azt sugallhatja, hogy a mező hibásan lett kitöltve. Opcionálisan össze is akadhat a bevitt adat karaktereivel, ami ettől olvashatatlan lenne.
+
+	- Az ilyen lebegő címkék nem adnak helyet és lehetőséget további fontos információknak. Például, ha a label egy jelszó lenne, és a jelszó esetében fontos lenne közölni, hogy legalább 8 karakter hosszúnak kellene lennie, egy ilyen label-lel ezt nem lehet hol közölni a felhasználókkal.
