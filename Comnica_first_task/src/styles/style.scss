@@ -12,7 +12,10 @@ html, body {
     height: 100vh;
     font-family: Roboto, 'Open Sans', 'Helvetica Neue', sans-serif;
     color: $textColor;
-    background-color: green;
+    background-image: url("/img/landing_page_BG.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-x: hidden;
 
     #landingPage {
         position: relative;
@@ -52,9 +55,15 @@ html, body {
                         font-size: 27px;
                         color: $subTitleGreen;
                     }
-        
+                }
+
+                & > div:nth-child(2) {
+                    width: 50%;
+
                     img {
-        
+                        display: block;
+                        width: 80%;
+                        margin: 0 auto;
                     }
                 }
 
