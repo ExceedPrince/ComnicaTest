@@ -29,7 +29,7 @@ html, body {
   height: 100vh;
   font-family: Roboto, "Open Sans", "Helvetica Neue", sans-serif;
   color: #31363c;
-  background-image: url("/img/landing_page_BG.png");
+  background-image: url("/img/landing_page_BG.webp");
   background-repeat: no-repeat;
   background-size: cover;
   overflow-x: hidden;

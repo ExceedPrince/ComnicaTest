@@ -6,7 +6,7 @@ export const HomePage = () => {
 		<div id="landingPage">
 			<div id="landingPage-col-1">
 				<div className="logoContainer">
-					<img src="./img/comnica_logo.png" alt="comnica_logo" />
+					<img src="./img/comnica_logo.webp" alt="comnica_logo" />
 				</div>
 				<div className="content">
 					<div>
@@ -15,7 +15,7 @@ export const HomePage = () => {
 					</div>
 					<div>
 						<img
-							src="./img/landing_page_illustration.png"
+							src="./img/landing_page_illustration.webp"
 							alt="landing_page_illustration"
 						/>
 					</div>
