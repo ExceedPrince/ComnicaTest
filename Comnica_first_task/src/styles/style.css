@@ -18,7 +18,7 @@
     right: 0;
   }
 }
-html, body {
+html, body, * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -36,7 +36,7 @@ html, body {
 }
 #root #landingPage {
   position: relative;
-  height: calc(100vh - 60px);
+  height: 100vh;
   padding: 30px 40px;
 }
 #root #landingPage .logoContainer {
@@ -120,4 +120,101 @@ html, body {
 #root #landingPage #landingPage-col-2 .content .roundedBtn:active {
   background-color: #1e8d73;
   cursor: pointer;
+}
+
+/* MEDIA QUERIES */
+@media only screen and (max-width: 1479px) {
+  #root #landingPage #landingPage-col-1 .content {
+    flex-direction: column;
+  }
+  #root #landingPage #landingPage-col-1 .content > div:nth-child(2) {
+    margin: 0 100px 0 auto;
+  }
+  #root #landingPage #landingPage-col-1 .content > div:nth-child(2) img {
+    width: unset;
+    max-width: 350px;
+  }
+  #root #landingPage #landingPage-col-2 .content {
+    margin-top: calc(20% + 120px);
+  }
+  #root #landingPage #landingPage-col-2 .content h2 {
+    font-size: 36px;
+  }
+}
+@media only screen and (max-width: 1023px) {
+  #root #landingPage {
+    padding: 20px 20px;
+  }
+  #root #landingPage #landingPage-col-1 {
+    width: 70%;
+    text-align: center;
+  }
+  #root #landingPage #landingPage-col-1 .content {
+    flex-direction: column;
+  }
+  #root #landingPage #landingPage-col-1 .content > div:first-child {
+    padding-left: unset;
+  }
+  #root #landingPage #landingPage-col-1 .content > div:nth-child(2) {
+    width: unset;
+    margin: 0 auto;
+  }
+  #root #landingPage #landingPage-col-2 {
+    padding: 0 30px;
+    text-align: center;
+  }
+  #root #landingPage #landingPage-col-2 .content {
+    margin-top: calc(17% + 100px);
+  }
+}
+@media only screen and (max-width: 767px) {
+  #root #landingPage {
+    display: flex;
+    flex-direction: column;
+    height: unset;
+    padding: unset;
+  }
+  #root #landingPage #landingPage-col-1 {
+    width: 100%;
+    padding: 20px;
+  }
+  #root #landingPage #landingPage-col-1 .content > div:nth-child(2) img {
+    width: 100%;
+  }
+  #root #landingPage #landingPage-col-2 {
+    position: relative;
+    left: 0;
+    width: 100%;
+    height: unset;
+    padding: 0 20px;
+  }
+  #root #landingPage #landingPage-col-2 .content {
+    margin: 100px 0 50px;
+  }
+}
+@media only screen and (max-width: 479px) {
+  #root #landingPage .logoContainer {
+    height: 25px;
+  }
+  #root #landingPage #landingPage-col-1 .content > div:first-child h1 {
+    font-size: 42px;
+  }
+  #root #landingPage #landingPage-col-1 .content > div:first-child h3 {
+    font-size: 22px;
+  }
+  #root #landingPage #landingPage-col-2 {
+    position: relative;
+    left: 0;
+    width: 100%;
+    padding: 0 20px;
+  }
+  #root #landingPage #landingPage-col-2 .content {
+    margin: 100px 0 50px;
+  }
+  #root #landingPage #landingPage-col-2 .content h2 {
+    font-size: 30px;
+  }
+  #root #landingPage #landingPage-col-2 .content p {
+    font-size: 16px;
+  }
 }/*# sourceMappingURL=style.css.map */
