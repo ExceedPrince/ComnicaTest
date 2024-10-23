@@ -1,7 +1,7 @@
 import { HomePage } from "./Pages";
 
 const App = () => {
-	return <HomePage />;
+	return <HomePage />; 
 };
 
 export default App;
